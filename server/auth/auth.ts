@@ -9,8 +9,8 @@ dotenv.config();
 // a matching user. If found, the function returns the user info. If
 // not found, the function adds user to the database and returns user
 // info.
-const cb = async (req, accessToken, refreshToken, profile, done) => {
-  const userInfo = await user.getUser(profile.sub);
+const cb = async (_, __, profile, done) => {
+  const userInfo = await user.getUser(profile.email);
   // check if user is found
   if (userInfo.length) {
     // the first  argument of done is err. You must set err to null or else
@@ -18,7 +18,6 @@ const cb = async (req, accessToken, refreshToken, profile, done) => {
     return done(null, userInfo);
   } else {
     // user not found so add user to db
-    // profile._json contains the following fields:
     const _id = await user.addUser(profile);
     return done(null, { ...profile.picture, _id });
   }

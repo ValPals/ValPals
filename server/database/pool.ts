@@ -1,5 +1,5 @@
 import path from 'path';
-import { Pool, QueryResult } from 'pg';
+import { Pool, QueryResult, QueryArrayResult} from 'pg';
 
 // TODO: move thi to secrets.js
 const PG_URI = `postgres://fslrxxad:${process.env.DB_PASSWORD}@berry.db.elephantsql.com/lhkttazi`;
@@ -9,9 +9,16 @@ const pool = new Pool({
   connectionString: PG_URI,
 });
 
+interface UserData {
+  email: string;
+  displayName: string;
+  formData: string;
+  aboutMe: string;
+  preferredPronouns: string;
+}
+
 export default {
-  query: (text: string, params: any[], callback: (err: Error, result: QueryResult<any>) => void) => {
-    
+  query: (text, params):Promise<QueryArrayResult<any[]>> => {
     const sqlCommand = text.replace(/\$(\d+)/g, (match, index) => {
       return typeof params[index - 1] === 'string'
         ? `\'${params[index - 1]}\'`
@@ -20,6 +27,6 @@ export default {
     console.log('running sql command: ', sqlCommand);
 
     // return result of executing sql command
-    return pool.query(text, params, callback);
+    return pool.query(text, params);
   },
-}
+};
