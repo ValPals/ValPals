@@ -9,7 +9,7 @@ function App() {
       <Navbar />
       <div>
         <Routes>
-          <Route path="/" element={<HomeContainer />} />
+          <Route path="/home" element={<HomeContainer />} />
 
 
 
