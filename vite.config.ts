@@ -6,6 +6,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 8888,
-    proxy: {},
+    proxy: {
+      "/auth": "http://localhost:8880/",
+    },
   },
 });
