@@ -12,7 +12,7 @@ function NavBar() {
           <img
             id="navBarLogo"
             className="w-8 max-h-sm "
-            src="./assets/ValPalsLogo.png"
+            src="./client/assets/ValPalsLogo.png"
             alt="ValPals, meet your match"
           />
           <h1 id="logoText" className="text- text-3xl">
