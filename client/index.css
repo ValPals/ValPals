@@ -29,6 +29,8 @@ a:hover {
 }
 
 body {
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23d1d1d1' fill-opacity='0.25' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
   margin: 0;
   display: flex;
   place-items: center;
@@ -83,12 +85,7 @@ button:focus-visible {
   padding: 3rem;
 }
 .card-panel {
-  display: flex;
-  flex-direction: column;
-  border-radius: .8rem;
-  padding: 3rem;
-  margin-bottom: 3rem;
-  background: #f6f6f6;
+  background: rgba(255,255,255, .7);
 }
 input {
   padding: .8rem .6rem;
