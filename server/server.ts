@@ -1,13 +1,11 @@
 import express, { Express, Request, Response, NextFunction } from 'express';
-import authRouter from './routes/authRouter';
-import passport from 'passport'
+// import passport from 'passport'
 import session from 'express-session';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 
 const port: number = Number(process.env.EXPRESS_PORT) || 8880;
 const app: Express = express();
-
 
 app.use(
   session({
@@ -17,8 +15,7 @@ app.use(
   })
 );
 
-
-app.use(passport.authenticate('session'));
+// app.use(passport.authenticate('session'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
@@ -29,8 +26,6 @@ app.use(
     origin: true,
   })
 );
-
-app.use('/auth', authRouter);
 
 app.use((req: Request, res: Response) => {
   res.status(404).send("This is not the page you're looking for...");

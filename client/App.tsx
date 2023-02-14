@@ -1,21 +1,34 @@
-import { Route, Routes } from 'react-router-dom'
-import Navbar from "/client/components/Navbar"
-import Error from '/client/components/Error'
-import HomeContainer from '/client/containers/HomeContainer'
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import './App.css'
 
 function App() {
+  const [count, setCount] = useState(0)
+
   return (
-    <div>
-      <Navbar />
+    <div className="App">
       <div>
-        <Routes>
-          <Route path="/home" element={<HomeContainer />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
+        <a href="https://vitejs.dev" target="_blank">
+          <img src="/vite.svg" className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://reactjs.org" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
       </div>
-      {/* <Footer /> */}
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>client/App.tsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
     </div>
-  );
+  )
 }
 
 export default App
