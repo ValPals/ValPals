@@ -10,3 +10,10 @@ interface InputProps extends InputHTMLAttributes<InputHTMLAttributes>{
 interface CardProps {
   children: ReactNode;
 }
+
+interface UserData {
+  displayName: string;
+  preferredPronouns: string;
+  aboutMe: string;
+  photo: string;
+}
