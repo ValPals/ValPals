@@ -15,4 +15,5 @@ interface UserData {
   displayName: string;
   preferredPronouns: string;
   aboutMe: string;
+  photo: string;
 }
