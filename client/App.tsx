@@ -10,9 +10,6 @@ function App() {
       <div>
         <Routes>
           <Route path="/home" element={<HomeContainer />} />
-
-
-
           <Route path="*" element={<Error />} />
         </Routes>
       </div>
