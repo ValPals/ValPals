@@ -13,9 +13,7 @@ type Props = {
 
 export default function ProfileCard({data}: Props) {
   return (
-    <div className="
-      bg-white flex flex-col rounded-lg shadow
-    ">
+    <div className='bg-white flex flex-col rounded-lg shadow'>
       {/* Profile Photo */}
       {data.photo && (
         <img 
@@ -25,7 +23,7 @@ export default function ProfileCard({data}: Props) {
         />
       )}
       {/* Information Block Section*/}
-      <div className="flex-1 flex flex-col">
+      <div className='flex-1 flex flex-col'>
         {/* name / pronoun container so they are side by side */}
         {/* Name */}{/* Pronouns */}
         {/* About Me */}
