@@ -8,7 +8,7 @@ export default function ProfileForm() {
         {/* NameInput */}
         {/* Pronouns Input */}
         {/* About Me Input */}
-        {/* Preferred Date Form */}
+        {/* Preferred First Date Form */}
         {/*  Save Button */}
       </div>
     </form>
