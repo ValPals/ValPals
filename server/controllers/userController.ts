@@ -1,9 +1,9 @@
 import pool from '../database/pool';
 
 interface Profile {
-    displayName: string;
-    email: string;
-  }
+  displayName: string;
+  email: string;
+}
 
 interface UserData {
   email: string;
@@ -14,24 +14,21 @@ interface UserData {
 }
 
 const userController = {
-
   addUser: async (profile: Profile) => {
     try {
-      const arr: Array<any> = [
-        profile.displayName,
-        profile.email,
-      ];
+      const arr: Array<any> = [profile.email];
       const sql: string = `INSERT INTO user_data
-      (displayName, email)
-      VALUES ($1, $2)
+      (email)
+      VALUES ($1)
       RETURNING _id;`;
       const data = await pool.query(sql, arr);
-      // const info: any = await data.rows[0]._id
-      const sqlID : string = `SELECT _id
-      FROM user_data
-      WHERE user_data.email=$1`;
-      const id = await pool.query(sqlID, [arr[1]]);
-      return id;
+      console.log("this is data: ", data);
+      // console.log('this is data rows: ', data.rows[0]);
+      // const sqlID: string = `SELECT _id
+      // FROM user_data
+      // WHERE user_data.email=$1`;
+      // const id = await pool.query(sqlID, [arr[0]]);
+      return data.rows[0];
       // see if this works?
       // console.log(data.rows);
       // return info;
@@ -45,6 +42,7 @@ const userController = {
       FROM user_data
       WHERE user_data.email=$1`;
       const data = await pool.query(sql, [email]);
+      console.log('this is data rows: ', data.rows[0]);
       if (data.rows.length === 0) {
         return null;
       } else if (data.rows.length === 1) {
@@ -58,6 +56,5 @@ const userController = {
     }
   },
 };
-
 
 export default userController;

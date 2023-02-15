@@ -1,6 +1,10 @@
 import passport from 'passport';
-import { Strategy as GoogleStrategy } from 'passport-google-oauth2';
-import user from '../controllers/userController'
+import {
+  Strategy as GoogleStrategy,
+  VerifyCallback,
+  VerifyFunctionWithRequest,
+} from 'passport-google-oauth2';
+import user from '../controllers/userController';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -9,16 +13,19 @@ dotenv.config();
 // a matching user. If found, the function returns the user info. If
 // not found, the function adds user to the database and returns user
 // info.
-const cb = async (_, __, profile, done) => {
+const cb = async (req, accessToken, refreshToken, profile, done) => {
+  console.log('this is profile: ', profile);
   const userInfo = await user.getUser(profile.email);
+  console.log('this is userInfo: ', userInfo);
   // check if user is found
-  if (userInfo.length) {
+  if (userInfo) {
     // the first  argument of done is err. You must set err to null or else
     // user will not be authenticated
     return done(null, userInfo);
   } else {
     // user not found so add user to db
     const _id = await user.addUser(profile);
+    console.log('this is _id: ', _id);
     return done(null, { ...profile.picture, _id });
   }
 };
