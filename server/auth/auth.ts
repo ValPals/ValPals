@@ -4,7 +4,7 @@ import {
   VerifyCallback,
   VerifyFunctionWithRequest,
 } from 'passport-google-oauth2';
-import user from '../controllers/userController';
+import user from '../controllers/authController';
 import dotenv from 'dotenv';
 
 dotenv.config();
