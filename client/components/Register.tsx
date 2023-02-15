@@ -3,8 +3,9 @@ import logo from '../assets/val-pal-logo-draft.png'
 function Register() {
   return (
       <>
+        <div className="val-container py-40">
           <div className="sm:mx-auto sm:w-full sm:max-w-md">
-            <div className="bg-white py-8 shadow sm:rounded-lg sm:px-10">
+            <div className="bg-light py-8 shadow sm:rounded-lg sm:px-10">
               <img
                 className="mx-auto w-auto"
                 src={ logo }
@@ -36,6 +37,7 @@ function Register() {
           </div>
           </div>
         </div>
+      </div>
       </>
   )
 }
