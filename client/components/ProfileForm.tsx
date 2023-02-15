@@ -74,10 +74,10 @@ export default function ProfileForm({ onChange, onSubmit }: ProfileFormProps) {
           value={formState.interestedIn}
           onSelect={(e: { target: { value: string; }})=> setFormState((s) => ({ ...s, interestedIn: e.target.value }))}
           choice={'preferred'}/>
-        {/* Preferred First Date Form TODO */}
+        {/* TODO: Preferred First Date Form */}
 
         <Button intent="primary" size="medium">Submit Form</Button>
-        {/*  Save Button - post request to UpdateUser Route*/}
+        {/*  TODO: Save Button - post request to UpdateUser Route*/}
       </div>
     </form>
   )

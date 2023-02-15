@@ -12,14 +12,10 @@ const data: UserData = {
   interestedIn: 'female', 
 }
 
-// type Props = {
-//   data: UserData;
-// }
-
 export default function ProfileCard() {
   // turn the string into an array of pronouns
   const pronouns = data.preferredPronouns.split('-');
-  const topThree = data.formData.split('.').filter((e,i)=> i < 3)
+  const topThree = data.formData.split('.').filter((e,i)=> i < 3);
 
   return (
     <div className='bg-white flex flex-col rounded-lg shadow'>
@@ -44,7 +40,7 @@ export default function ProfileCard() {
           </div>
         </div>
 
-        {/* Top 3 date outings */}
+        {/* Top Three Dates: Date component x 3 */}
         <div className='flex flex-col'>
           <div>
             <h2 className='font-semibold'>Top Three Dates:</h2>
@@ -54,9 +50,12 @@ export default function ProfileCard() {
             {topThree.map((date, i) => <Date key={i} date={date}/>)}
           </div>
         </div>
-        
-        {/* About Me  - add about me section with truncate as needed?*/}
-        {/* edit profile button  - should pull up ProfileForm*/}
+
+        {/* TODO: Interested in: Gender */} {/* TODO: Associate with: Gender */}
+
+        {/* TODO: About Me  - add about me section with truncate as needed?*/}
+
+        {/* TODO: edit profile button  - should pull up / route to - ProfileForm*/}
       </div>
     </div>
   )
