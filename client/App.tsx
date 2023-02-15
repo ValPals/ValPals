@@ -4,13 +4,15 @@ import Error from './components/Error'
 import HomeContainer from './containers/HomeContainer';
 import Register from './components/Register';
 import ProfileForm from './components/ProfileForm';
+import ProfileCard from './components/Profile';
+
 
 function App() {
   return (
     <>
       <div className=" w-full">
           <NavBar />
-          {/* <ProfileForm /> */}
+          <ProfileCard />
           <Routes>
             <Route path='/register' element={<Register/>}/>
             {/* <Route path="/home" element={<ProfileCard/>} /> */}
