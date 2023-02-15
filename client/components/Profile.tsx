@@ -1,6 +1,7 @@
 import { UserData } from '../interfaces';
 import Pronoun from './Pronoun';
 import Date from './Date';
+import Gender from './Gender';
 
 
 const data: UserData = {
@@ -27,7 +28,7 @@ export default function ProfileCard() {
           className='h-65 w-full object-cover rounded-t-lg shadow-md'
         />
       )}
-      {/* Information Block Section*/}
+      {/* TODO: Finish Styling & spacing - Information Block Section*/}
       <div className='flex-1 flex flex-col'>
         <div className="flex-1 flex flex-col p-5">
 
@@ -52,14 +53,24 @@ export default function ProfileCard() {
             </div>
           </div>
 
-          {/* TODO: Interested in: Gender */} {/* TODO: Associate with: Gender */}
+          {/* Associate with: Gender */}
+          <div>
+            <h2 className='font-semibold'>Associate With:</h2>
+            <Gender key={ data.associateWith } gender={ data.associateWith } />
+          </div>
+
+          {/* Interested in: Gender */} 
+          <div>
+            <h2 className='font-semibold'>Interested In:</h2>
+            <Gender key={ data.interestedIn } gender={ data.interestedIn } />
+          </div>
 
           {/* About Me  - add about me section with line clamp to 6 as needed? */}
-          <section className="mt-2 flex-1">
+          <div className="mt-2 flex-1">
             <p className="text-xs line-clamp-6">
               {data.aboutMe}
             </p>
-          </section>
+          </div>
           
           {/* TODO: TOGGLE: edit profile button  - should pull up / route to - ProfileForm */}
 
