@@ -15,13 +15,13 @@ dotenv.config();
 // info.
 const cb = async (req, accessToken, refreshToken, profile, done) => {
   console.log('this is profile: ', profile);
-  const userInfo = await user.getUser(profile.email);
-  console.log('this is userInfo: ', userInfo);
+  // const userInfo = await user.getUser(profile.email);
+  // console.log('this is userInfo: ', userInfo);
   // check if user is found
-  if (userInfo) {
+  if (profile) {
     // the first  argument of done is err. You must set err to null or else
     // user will not be authenticated
-    return done(null, userInfo);
+    return done(null, profile);
   } else {
     // user not found so add user to db
     const _id = await user.addUser(profile);

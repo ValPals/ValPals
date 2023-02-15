@@ -4,17 +4,11 @@ import Date from './Date';
 import Gender from './Gender';
 
 
-const data: UserData = {
-  displayName: 'Jane Cooper', 
-  preferredPronouns: 'she-her', 
-  aboutMe: 'I love dogs.', 
-  formData: 'Walk.Movie.Dinner.Netflix & Chill.Dessert.Exercise.Picnic.Doggy Play Date.Children Play Date.Coffee', 
-  associateWith: 'female', 
-  interestedIn: 'male', 
-  photo: 'mEZ3PoFGs_k',
+type Props = {
+  data: UserData,
 }
 
-export default function ProfileCard() {
+export default function ProfileCard({data}: Props) {
   // turn the string into an array of pronouns
   const pronouns = data.preferredPronouns.split('-');
   const topThree = data.formData.split('.').filter((e,i)=> i < 3);
