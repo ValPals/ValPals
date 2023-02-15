@@ -31,12 +31,6 @@ a:hover {
 body {
   background-color: #000000;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23d1d1d1' fill-opacity='0.25' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 32rem;
-  min-height: 100vh;
-  font-size: 1.4rem;
 }
 
 h1 {
@@ -77,8 +71,8 @@ button:focus-visible {
 
 
 /* App Styles */
-.container {
-  width: 100%;
+.val-container {
+  max-width: 100%;
 }
 .row {
   margin: 0 auto;
@@ -91,4 +85,17 @@ input {
   padding: .8rem .6rem;
   border: 1px solid rgba(0,0,0,.2);
   background: #f6f6f6;
+}
+#site-logo img {
+  width: 80px;
+}
+.main-nav {
+  height: 120px;
+}
+.bg-light {
+  background: rgba(255,255,255, .75)
+}
+.mobile-panel {
+  top:100%;
+  background: #666;
 }

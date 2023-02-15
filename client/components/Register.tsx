@@ -3,14 +3,15 @@ import logo from '../assets/val-pal-logo-draft.png'
 function Register() {
   return (
       <>
+        <div className="val-container py-40">
           <div className="sm:mx-auto sm:w-full sm:max-w-md">
-            <div className="card-panel py-8 shadow sm:rounded-lg sm:px-20">
+            <div className="bg-light py-8 shadow sm:rounded-lg sm:px-10">
               <img
-                className="mx-auto w-auto h-52"
+                className="mx-auto w-auto"
                 src={ logo }
                 alt="ValPals"
               />
-              <h2 className="mt-6 text-center text-xl font-bold tracking-tight text-gray-900">Register with Google</h2>
+              <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Create Your Account</h2>
           <div className="mt-6 grid grid-cols-1">
             <div>
               <a
@@ -36,6 +37,7 @@ function Register() {
           </div>
           </div>
         </div>
+      </div>
       </>
   )
 }

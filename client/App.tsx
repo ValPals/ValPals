@@ -1,20 +1,23 @@
 import { Route, Routes } from 'react-router-dom'
-import Navbar from "/client/components/Navbar"
-import Error from '/client/components/Error'
-import HomeContainer from '/client/containers/HomeContainer'
+import NavBar from './components/NavBar';
+import Error from './components/Error'
+import HomeContainer from './containers/HomeContainer';
+import Register from './components/Register';
+import ProfileCard from './components/Profile';
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <div>
-        <Routes>
-          <Route path="/home" element={<HomeContainer />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
+    <>
+      <div className=" w-full">
+          <NavBar />
+          <Routes>
+            <Route path='/register' element={<Register/>}/>
+            {/* <Route path="/home" element={<ProfileCard/>} /> */}
+            <Route path='/' element={<HomeContainer/>}/>
+            <Route path="*" element={<Error />} />
+          </Routes>
       </div>
-      {/* <Footer /> */}
-    </div>
+    </>
   );
 }
 
