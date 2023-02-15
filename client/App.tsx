@@ -1,15 +1,24 @@
-import { useState } from 'react'
-import Register from './components/Register'
-import './App.css'
+import { Route, Routes } from 'react-router-dom'
+import NavBar from './components/NavBar';
+import Error from './components/Error'
+import HomeContainer from './containers/HomeContainer';
+import Register from './components/Register';
+import ProfileCard from './components/Profile';
 
 function App() {
-
   return (
-    <div className="App">
-      <Register />
-
-    </div>
-  )
+    <>
+      <div className=" w-full">
+          <NavBar />
+          <Routes>
+            <Route path='/register' element={<Register/>}/>
+            {/* <Route path="/home" element={<ProfileCard/>} /> */}
+            <Route path='/' element={<HomeContainer/>}/>
+            <Route path="*" element={<Error />} />
+          </Routes>
+      </div>
+    </>
+  );
 }
 
 export default App

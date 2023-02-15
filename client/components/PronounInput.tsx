@@ -4,9 +4,11 @@ export default function PronounInput() {
   
   return (
     <div>
-      <label htmlFor="location" className="block text-sm font-medium text-gray-700">
+
+      <label htmlFor="pronoun" className="block text-sm font-medium text-gray-700">
         Pronouns
       </label>
+
       <select
         id="pronoun"
         name="pronoun"
