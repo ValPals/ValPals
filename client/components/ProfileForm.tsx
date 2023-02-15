@@ -46,9 +46,9 @@ export default function ProfileForm({ onChange, onSubmit }: ProfileFormProps) {
 
   return (
     <div className="val-container py-40">
-      <div className="mx-auto bg-light px-20 py-20 w-96 shadow-xl rounded-lg sm:rounded-lg">
+      <div className="mx-auto bg-light px-10 py-10 w-96 shadow-xl rounded-lg sm:rounded-lg">
         <form onSubmit={handleSubmit} className="space-y-8">
-          <h2 className="text-center font-bold text-xl text-zinc-800">Tell Us About Yourself</h2>
+          <h2 className="text-center font-bold text-2xl text-zinc-800">Tell Us About Yourself</h2>
           <div className="space-y-8 sm:space-y-5">
             {/* NameInput - Text Input*/}
             <NameInput 
@@ -81,7 +81,7 @@ export default function ProfileForm({ onChange, onSubmit }: ProfileFormProps) {
               choice={'preferred'}/>
             {/* TODO: Preferred First Date Form */}
 
-            <Button intent="primary" size="medium" onClick={
+            <Button className="block-btn mt-5" intent="primary" size="medium" onClick={
               () => {location.href = 'localhost:8888/home'}
             }>Submit Form</Button>
             {/*  TODO: Save Button - post request to UpdateUser Route*/}

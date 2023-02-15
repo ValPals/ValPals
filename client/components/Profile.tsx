@@ -31,15 +31,15 @@ export default function ProfileCard({data}: Props) {
         <div className='flex-1 flex flex-col'>
           <div className="flex-1 flex flex-col p-5">
 
-            {/* name / pronoun container so they are side by side */}
-            <div className='flex flex-col '>
-              <div className="py-1">
-                <h2 className='font-semibold'>{data.displayName}</h2>
-              </div>
-              <div className="py-1">
-                {pronouns.map((pronoun, i) => <Pronoun key={i} pronoun={pronoun}/>)}
-              </div>
+          {/* name / pronoun container so they are side by side */}
+          <div className='flex flex-col '>
+            <div className="py-1">
+              <h2 className='text-3xl mb-3 font-semibold'>{data.displayName}</h2>
             </div>
+            <div className="py-1">
+              {pronouns.map((pronoun, i) => <Pronoun key={i} pronoun={pronoun}/>)}
+            </div>
+          </div>
 
             {/* Top Three Dates: Date component x 3 */}
             <div className='flex flex-col'>
