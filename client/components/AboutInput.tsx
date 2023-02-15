@@ -1,6 +1,12 @@
+import { ChangeEventHandler } from "react";
 
 
-export default function AboutInput() {
+type AboutInputProps = {
+  value: string,
+  onChange?: ChangeEventHandler<HTMLInputElement>,
+}
+
+export default function AboutInput({ value, onChange }: AboutInputProps) {
   return (
     <div>
       <label htmlFor="about" className="block text-sm font-medium text-gray-700">
@@ -11,6 +17,7 @@ export default function AboutInput() {
           rows={4}
           name="about"
           id="about"
+          value={value}
           className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
           defaultValue={''}
         />
