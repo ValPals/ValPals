@@ -3,7 +3,7 @@ import { ChangeEventHandler } from "react";
 
 type AboutInputProps = {
   value: string,
-  onChange?: ChangeEventHandler<HTMLInputElement>,
+  onChange?: ChangeEventHandler<HTMLTextAreaElement>,
 }
 
 export default function AboutInput({ value, onChange }: AboutInputProps) {
@@ -18,8 +18,9 @@ export default function AboutInput({ value, onChange }: AboutInputProps) {
           name="about"
           id="about"
           value={value}
-          className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          defaultValue={''}
+          onChange={onChange}
+          className="block w-full p-3 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+          defaultValue={'Enter a brief description'}
         />
       </div>
     </div>

@@ -99,7 +99,6 @@ button:focus-visible {
 input {
   padding: .8rem .6rem;
   border: 1px solid rgba(0,0,0,.2);
-  background: #f6f6f6;
 }
 #site-logo img {
   width: 80px;
@@ -118,6 +117,7 @@ input {
 }
 .site-footer {
   position: sticky;
+  top:100%;
   background:  rgba(23,23,23,.8);
 
 }
@@ -129,8 +129,16 @@ input {
   color: rgba(255,255,255, .85);
   outline: none;
   border: none;
+  transition: all .25s ease;
 }
-
+.val-btn:hover {
+  background:hsla(346, 96%, 54%, 0.7);
+  cursor: pointer;
+}
+.val-btn.block-btn {
+  display: block;
+  width: 100%;
+}
 .val-img {
   max-height: 350px;
 }
