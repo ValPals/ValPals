@@ -1,6 +1,7 @@
 import pool from '../database/pool';
 
 interface Profile {
+  id: string,
   displayName: string;
   email: string;
 }
@@ -16,10 +17,11 @@ interface UserData {
 const authController = {
   addUser: async (profile: Profile) => {
     try {
-      const arr: Array<any> = [profile.email];
+      const arr: Array<any> = [profile.id, profile.email];
+      console.log('this isthe profile.id :', profile.id );
       const sql: string = `INSERT INTO user_data
-      (email)
-      VALUES ($1)
+      (_id, email)
+      VALUES ($1, $2)
       RETURNING _id;`;
       const data = await pool.query(sql, arr);
       console.log("this is data: ", data);
