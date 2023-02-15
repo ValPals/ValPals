@@ -17,10 +17,6 @@ interface UserData {
   aboutMe: string;
   photo?: string;
   formData: string;
-  displayName: '', 
-  preferredPronouns: '', 
-  aboutMe: '', 
-  formData: '', 
-  associateWith: '', 
-  interestedIn: '', 
+  associateWith: string; 
+  interestedIn: string;
 }
