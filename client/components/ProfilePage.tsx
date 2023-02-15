@@ -12,18 +12,17 @@ type Props = {
 
 export default function ProfilePage({data}: Props) {
   // turn the string into an array of pronouns
-  const pronouns = data[1].preferredPronouns.split('-');
-  const topThree = data[1].formData.split('.').filter((e,i)=> i < 3);
-  console.log(data[1].photo);
+  const pronouns = data.preferredPronouns.split('-');
+  const topThree = data.formData.split('.').filter((e,i)=> i < 3);
 
   return (
     <div className="row py-40">
     <div className='mx-auto bg-light flex flex-col rounded-lg shadow w-96'>
       {/* Profile Photo */}
       <div className="image-container overflow-hidden">
-        {data[1].photo && (
+        {data.photo && (
           <img 
-            src={`https://source.unsplash.com/${data[1].photo}`}
+            src={`https://source.unsplash.com/${data.photo}`}
             alt='profile photo'
             className='val-img h-65 w-full object-cover rounded-t-lg shadow-md hover:scale-110 transition-all duration-500'
           />
@@ -36,7 +35,7 @@ export default function ProfilePage({data}: Props) {
           {/* name / pronoun container so they are side by side */}
           <div className='flex flex-col '>
             <div className="py-1">
-              <h2 className='font-semibold'>{data[1].displayName}</h2>
+              <h2 className='font-semibold'>{data.displayName}</h2>
             </div>
             <div className="py-1">
               {pronouns.map((pronoun, i) => <Pronoun key={i} pronoun={pronoun}/>)}
@@ -57,21 +56,28 @@ export default function ProfilePage({data}: Props) {
           {/* Associate with: Gender */}
           <div className="py-1">
             <h2 className='py-1 font-semibold'>Associate With:</h2>
-            <Gender key={ data[1].associateWith } gender={ data[1].associateWith } color='bg-red-700' />
+            <Gender key={ data.associateWith } gender={ data.associateWith } color='bg-red-700' />
           </div>
 
           {/* Interested in: Gender */} 
           <div className="py-1">
             <h2 className='py-1 font-semibold'>Interested In:</h2>
-            <Gender key={ data[1].interestedIn } gender={ data[1].interestedIn } color='bg-zinc-700' />
+            <Gender key={ data.interestedIn } gender={ data.interestedIn } color='bg-zinc-700' />
           </div>
 
           {/* About Me  - add about me section with line clamp to 6 as needed? */}
           <div className="mt-2 flex-1">
             <h2 className='py-1 font-semibold'>About Me: </h2>
-            <p className="text-zinc-700 font-semibold">{data[1].aboutMe}</p>
-  
+            <p className="text-zinc-700 font-semibold">{data.aboutMe}</p>
           </div>
+
+          <div className='mt-4 flex justify-evenly'>
+
+            <button className='text-red-500 bg-white rounded-full shadow hover:bg-red-500 hover:text-white hover:scale-125'>Edit Profile</button>
+
+          </div>
+
+
         </div>
       </div>
     </div>
