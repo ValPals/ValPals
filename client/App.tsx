@@ -4,6 +4,7 @@ import Error from './components/Error'
 import HomeContainer from './containers/HomeContainer';
 import Register from './components/Register';
 import ProfileForm from './components/ProfileForm';
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path='/' element={<HomeContainer/>}/>
             <Route path="*" element={<Error />} />
           </Routes>
+          <Footer />
       </div>
     </>
   );

@@ -21,7 +21,7 @@ function Home() {
         <img
           id="homeLogo"
           className="w-2/5 max-w-lg"
-          src="../client/assets/ValPalsLogo.png"
+          src="/ValPalsLogo.png"
           alt="ValPals, meet your match"
         />
 {/* 

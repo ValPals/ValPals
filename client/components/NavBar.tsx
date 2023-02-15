@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import logo from '../assets/ValPalsLogo.png';
+import logo from '/ValPalsLogo.png';
 
 const navigation = [
   { name: 'Home', href: '#', current: true },
@@ -15,7 +15,7 @@ function classNames(...classes: any) {
 
 export default function NavBar() {
   return (
-     <Disclosure as="nav" className="main-nav relative flex w-full bg-neutral-900">
+     <Disclosure as="nav" className="main-nav relative flex w-full">
           {({ open }) => (
             <>
               <div className=" w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -71,7 +71,7 @@ export default function NavBar() {
                     {/* Profile dropdown */}
                     <Menu as="div" className="relative ml-3">
                       <div>
-                        <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                        <Menu.Button className="flex rounded-full text-med focus:outline-none focus:border-none">
                           <span className="sr-only">Open user menu</span>
                           <img
                             className="h-8 w-8 rounded-full"
@@ -122,7 +122,7 @@ export default function NavBar() {
               </div>
     
               <Disclosure.Panel className="sm:hidden absolute mobile-panel w-full">
-                <div className="space-y-1 px-2 pt-2 pb-3 bg-neutral-900">
+                <div className="space-y-1 px-2 pt-2 pb-3 mobile-panel-dropdown">
                   {navigation.map((item) => (
                     <Disclosure.Button
                       key={item.name}

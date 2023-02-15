@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  min-height: 100%;
+}
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -29,8 +32,11 @@ a:hover {
 }
 
 body {
-  background-color: #000000;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23d1d1d1' fill-opacity='0.25' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  height: 100%;
+  min-height: 100vh;
+  background-image: url('/hearts-bg.png');
+  background-repeat: repeat;
+  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23d1d1d1' fill-opacity='0.25' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"); */
 }
 
 h1 {
@@ -71,6 +77,14 @@ button:focus-visible {
 
 
 /* App Styles */
+.candy-mesh {
+	background-color: rgba(255, 75, 108, 0.45);
+	background-image: radial-gradient(at 99% 6%, hsla(356, 67%, 51%, 0.889) 0px, transparent 30%),
+		radial-gradient(at 55% 88%, hsla(339, 72%, 41%, 0.7) 0px, transparent 50%),
+		radial-gradient(at 53% 27%, hsla(326, 74%, 35%, 0.826) 0px, transparent 50%),
+		radial-gradient(at 89% 89%, hsla(319, 64%, 40%, 0.705) 0px, transparent 50%),
+		radial-gradient(at 35% 44%, hsla(312, 61%, 44%, 0.534) 0px, transparent 50%);
+}
 .val-container {
   max-width: 100%;
 }
@@ -92,12 +106,18 @@ input {
 }
 .main-nav {
   height: 120px;
+  background: rgba(23,23,23,.8)
 }
 .bg-light {
-	backdrop-filter: blur(16px) saturate(130%);
+	backdrop-filter: blur(15px) saturate(110%);
 	background-color: rgba(255, 255, 255, 0.4);
 }
 .mobile-panel {
   top:100%;
-  background: #666;
+  background: rgba(23,23,23,.8);
+}
+.site-footer {
+  position: sticky;
+  background:  rgba(23,23,23,.8);
+
 }
