@@ -1,38 +1,32 @@
-import logo from '../assets/val-pal-logo-draft.png'
+import logo from '../assets/val-pal-logo-draft.png';
+import google from '/google.svg'
 
 function Register() {
   return (
       <>
-        <div className="val-container py-40">
+        <div className="val-container px-20 py-40">
           <div className="sm:mx-auto sm:w-full sm:max-w-md">
-            <div className="bg-light py-8 shadow sm:rounded-lg sm:px-10">
+            <div className="bg-light py-8 px-6 shadow-xl sm:rounded-lg sm:px-10">
               <img
-                className="mx-auto w-auto"
+                className="mx-auto w-48"
                 src={ logo }
                 alt="ValPals"
               />
-              <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Create Your Account</h2>
+              <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-700">Create Your Account</h2>
           <div className="mt-6 grid grid-cols-1">
             <div>
               <a
                 href="/auth/google"
-                className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50"
+                className="inline-flex w-full justify-center rounded-md border border-gray-600 bg-gray-700 py-3 px-4 shadow-sm hover:bg-gray-900"
               >
               <span className="sr-only">Register with Google</span>
-              <svg className="h-8 w-8 text-red-500"  
-                  width="24" 
-                  height="24" 
-                  viewBox="0 0 24 24" 
-                  stroke-width="2" 
-                  stroke="currentColor" 
-                  fill="none" 
-                  stroke-linecap="round" 
-                  stroke-linejoin="round"
-                  >  
-                  <path stroke="none" d="M0 0h24v24H0z"/>  
-                  <path d="M17.788 5.108A9 9 0 1021 12h-8" />
-                </svg>     
-              </a>
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 512 512">
+                <path fill="#fbbb00" d="M113.47 309.408 95.648 375.94l-65.139 1.378C11.042 341.211 0 299.9 0 256c0-42.451 10.324-82.483 28.624-117.732h.014L86.63 148.9l25.404 57.644c-5.317 15.501-8.215 32.141-8.215 49.456.002 18.792 3.406 36.797 9.651 53.408z"/>
+                <path fill="#518ef8" d="M507.527 208.176C510.467 223.662 512 239.655 512 256c0 18.328-1.927 36.206-5.598 53.451-12.462 58.683-45.025 109.925-90.134 146.187l-.014-.014-73.044-3.727-10.338-64.535c29.932-17.554 53.324-45.025 65.646-77.911h-136.89V208.176h245.899z"/>
+                <path fill="#28b446" d="m416.253 455.624.014.014C372.396 490.901 316.666 512 256 512c-97.491 0-182.252-54.491-225.491-134.681l82.961-67.91c21.619 57.698 77.278 98.771 142.53 98.771 28.047 0 54.323-7.582 76.87-20.818l83.383 68.262z"/>
+                <path fill="#f14336" d="m419.404 58.936-82.933 67.896C313.136 112.246 285.552 103.82 256 103.82c-66.729 0-123.429 42.957-143.965 102.724l-83.397-68.276h-.014C71.23 56.123 157.06 0 256 0c62.115 0 119.068 22.126 163.404 58.936z"/>
+              </svg>    
+                 <span className="px-3 text-slate-300 text-med font-semibold">Register with Google</span></a>
             </div>
           </div>
           </div>
