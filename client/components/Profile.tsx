@@ -29,33 +29,42 @@ export default function ProfileCard() {
       )}
       {/* Information Block Section*/}
       <div className='flex-1 flex flex-col'>
+        <div className="flex-1 flex flex-col p-5">
 
-        {/* name / pronoun container so they are side by side */}
-        <div className='flex flex-col'>
-          <div>
-            <h2 className='font-semibold'>{data.displayName}</h2>
+          {/* name / pronoun container so they are side by side */}
+          <div className='flex flex-col '>
+            <div>
+              <h2 className='font-semibold'>{data.displayName}</h2>
+            </div>
+            <div>
+              {pronouns.map((pronoun, i) => <Pronoun key={i} pronoun={pronoun}/>)}
+            </div>
           </div>
-          <div>
-            {pronouns.map((pronoun, i) => <Pronoun key={i} pronoun={pronoun}/>)}
+
+          {/* Top Three Dates: Date component x 3 */}
+          <div className='flex flex-col'>
+            <div>
+              <h2 className='font-semibold'>Top Three Dates:</h2>
+            </div>
+            <div>
+              {/* Date Component */}
+              {topThree.map((date, i) => <Date key={i} date={date}/>)}
+            </div>
           </div>
+
+          {/* TODO: Interested in: Gender */} {/* TODO: Associate with: Gender */}
+
+          {/* About Me  - add about me section with line clamp to 6 as needed? */}
+          <section className="mt-2 flex-1">
+            <p className="text-xs line-clamp-6">
+              {data.aboutMe}
+            </p>
+          </section>
+          
+          {/* TODO: TOGGLE: edit profile button  - should pull up / route to - ProfileForm */}
+
+          {/* TODO: TOGGLE: BLOCK button & MATCH button */}
         </div>
-
-        {/* Top Three Dates: Date component x 3 */}
-        <div className='flex flex-col'>
-          <div>
-            <h2 className='font-semibold'>Top Three Dates:</h2>
-          </div>
-          <div>
-            {/* Date Component */}
-            {topThree.map((date, i) => <Date key={i} date={date}/>)}
-          </div>
-        </div>
-
-        {/* TODO: Interested in: Gender */} {/* TODO: Associate with: Gender */}
-
-        {/* TODO: About Me  - add about me section with truncate as needed?*/}
-
-        {/* TODO: edit profile button  - should pull up / route to - ProfileForm*/}
       </div>
     </div>
   )

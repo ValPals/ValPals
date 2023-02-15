@@ -69,7 +69,7 @@ export default function ProfileForm({ onChange, onSubmit }: ProfileFormProps) {
           onSelect={(e: { target: { value: string; }; }) => setFormState((s) => ({...s, associateWith: e.target.value }))}
           choice={'self'}/>
         
-        {/* Preferred Gender Identidy (he | she | non-binary | other ) */}
+        {/* Preferred Gender Identity (he | she | non-binary | other ) */}
         <GenderInput 
           value={formState.interestedIn}
           onSelect={(e: { target: { value: string; }})=> setFormState((s) => ({ ...s, interestedIn: e.target.value }))}
