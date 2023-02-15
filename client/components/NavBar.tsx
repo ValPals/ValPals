@@ -5,8 +5,8 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import logo from '/ValPalsLogo.png';
 
 const navigation = [
-  { name: 'Home', href: '#', current: true },
-  { name: 'Profile', href: '#', current: false },
+  { name: 'Home', href: 'http://localhost:8888/home', current: true },
+  { name: 'Profile', href: 'http://localhost:8888/profile', current: false },
 ]
 
 function classNames(...classes: any) {

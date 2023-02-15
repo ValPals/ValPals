@@ -4,18 +4,22 @@ import Error from './components/Error'
 import HomeContainer from './containers/HomeContainer';
 import Register from './components/Register';
 import ProfileForm from './components/ProfileForm';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
+import ProfileCard from './components/Profile';
 
 function App() {
   return (
     <>
       <div className=" w-full">
           <NavBar />
-          {/* <ProfileForm /> */}
+        
           <Routes>
-            <Route path='/register' element={<Register/>}/>
-            {/* <Route path="/home" element={<ProfileCard/>} /> */}
-            <Route path='/' element={<HomeContainer/>}/>
+            
+            <Route path='/form' element={<ProfileForm/>}/>
+            <Route path="/profile" element={<ProfileCard/>} />
+            <Route path='/home' element={<HomeContainer/>}/>
+            {/* <Route path='/profile' element={<Profile/>}/> */}
+            <Route path='/' element={<Register/>}/>
             <Route path="*" element={<Error />} />
           </Routes>
           <Footer />
@@ -25,3 +29,4 @@ function App() {
 }
 
 export default App
+

@@ -121,3 +121,16 @@ input {
   background:  rgba(23,23,23,.8);
 
 }
+
+.val-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  background:hsla(339, 72%, 41%, 0.7);
+  color: rgba(255,255,255, .85);
+  outline: none;
+  border: none;
+}
+
+.val-img {
+  max-height: 350px;
+}
