@@ -14,13 +14,9 @@ interface CardProps {
 interface UserData {
   displayName: string;
   preferredPronouns: string;
-  aboutMe: string;
-  photo?: string;
   formData: string;
-  displayName: '', 
-  preferredPronouns: '', 
-  aboutMe: '', 
-  formData: '', 
-  associateWith: '', 
-  interestedIn: '', 
+  aboutMe: string;
+  associateWith: string; 
+  interestedIn: string;
+  photo?: string;
 }

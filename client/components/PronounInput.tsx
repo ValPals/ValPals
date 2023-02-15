@@ -6,7 +6,7 @@ type PronounInputProps = {
 }
 
 export default function PronounInput({ value, onSelect }: PronounInputProps) {
-  const options: string[] = [ 'he','she','they','other' ];
+  const options: string[] = [ '(f)ae', 'e/ey', 'he', 'per', 'she', 'they', 've', 'xe', 'ze/zie' ];
   
   return (
     <div>
