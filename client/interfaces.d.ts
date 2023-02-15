@@ -15,6 +15,12 @@ interface UserData {
   displayName: string;
   preferredPronouns: string;
   aboutMe: string;
-  photo: string;
+  photo?: string;
   formData: string;
+  displayName: '', 
+  preferredPronouns: '', 
+  aboutMe: '', 
+  formData: '', 
+  associateWith: '', 
+  interestedIn: '', 
 }
