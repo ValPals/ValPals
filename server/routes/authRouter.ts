@@ -20,7 +20,7 @@ router.get(
   passport.authenticate('google', { failureRedirect: '/auth/failure' }),
   (req, res) => {
     // Success
-    return res.redirect('http://localhost:8888/');
+    return res.redirect('/form');
   }
 );
 

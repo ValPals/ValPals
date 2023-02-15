@@ -14,14 +14,6 @@ const pool = new Pool({
   connectionString: PG_URI,
 });
 
-interface UserData {
-  email: string;
-  displayName: string;
-  formData: string;
-  aboutMe: string;
-  preferredPronouns: string;
-}
-
 export default {
   query: (text, params): Promise<QueryArrayResult<any[]>> => {
     const sqlCommand = text.replace(/\$(\d+)/g, (match, index) => {
