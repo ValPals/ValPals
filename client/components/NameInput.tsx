@@ -14,13 +14,14 @@ export default function NameInput({ value, onChange}: NameInputProps) {
       </label>
 
       {/* Input Field */}
-      <div className="mt-1">
+      <div className="mt-1 text-zinc-700">
         <input
           type="name"
           name="name"
           id="name"
           value= { value }
-          className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+          onChange={onChange}
+          className="block w-full rounded-md text-slate-200 border-gray-300 text- shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
           placeholder="Name"
         />
       </div>

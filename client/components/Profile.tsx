@@ -40,7 +40,7 @@ export default function ProfileCard() {
           {/* name / pronoun container so they are side by side */}
           <div className='flex flex-col '>
             <div className="py-1">
-              <h2 className='font-semibold'>{data.displayName}</h2>
+              <h2 className='text-3xl mb-3 font-semibold'>{data.displayName}</h2>
             </div>
             <div className="py-1">
               {pronouns.map((pronoun, i) => <Pronoun key={i} pronoun={pronoun}/>)}

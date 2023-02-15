@@ -10,7 +10,7 @@ import ProfileCard from './components/Profile';
 function App() {
   return (
     <>
-      <div className=" w-full">
+      <div className="main-container h-screen w-full">
           <NavBar />
         
           <Routes>
