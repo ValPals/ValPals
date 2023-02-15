@@ -24,7 +24,7 @@
     "formData": "Walk.Movie.Dinner.Netflix & Chill.Dessert.Exercise.Picnic.Doggy Play Date.Children Play Date.Coffee", 
     "associateWith": "non-binary", 
     "interestedIn": "other", 
-    "photo": "Eg2xk_lkLXo"
+    "photo": "J8c1hkwrr-8"
   },
   {
     "displayName": "Reinforcement Project", 
@@ -37,12 +37,57 @@
   },
   {
     "displayName": "Nick Fury", 
-    "preferredPronouns": "they/them", 
+    "preferredPronouns": "they-them", 
     "aboutMe": "I've got my eye on you.", 
-    "formData": "Walk.Movie.Dinner.Netflix & Chill.Dessert.Exercise.Picnic.Doggy Play Date.Children Play Date.Coffee", 
+    "formData": "Exercise.Walk.Movie.Dinner.Netflix & Chill.Dessert.Picnic.Doggy Play Date.Children Play Date.Coffee", 
     "associateWith": "non-binary", 
-    "interestedIn": "other", 
-    "photo": "Eg2xk_lkLXo"
+    "interestedIn": "male", 
+    "photo": "FZ54rKAMKMw"
+  },
+  {
+    "displayName": "Eevee", 
+    "preferredPronouns": "they-them", 
+    "aboutMe": "EEEEEEVEEEEE.", 
+    "formData": "Walk.Doggy Play Date.Coffee", 
+    "associateWith": "non-binary", 
+    "interestedIn": "non-binary", 
+    "photo": "A1I8g8NccNg"
+  },
+  {
+    "displayName": "Pikachu", 
+    "preferredPronouns": "he-him", 
+    "aboutMe": "PIKA PIKA", 
+    "formData": "Dinner.Dessert.Netflix & Chill.Walk.Movie.Exercise.Picnic.Doggy Play Date.Children Play Date.Coffee", 
+    "associateWith": "male", 
+    "interestedIn": "male", 
+    "photo": "xKRv2abDDeg"
+  },
+  {
+    "displayName": "Vanessa", 
+    "preferredPronouns": "she-her", 
+    "aboutMe": "I enjoy taking long walks on the beach.", 
+    "formData": "Dinner.Dessert.Movie.Netflix & Chill.Walk.Exercise.Picnic.Doggy Play Date.Children Play Date.Coffee", 
+    "associateWith": "female", 
+    "interestedIn": "male", 
+    "photo": "9YsDVSTctnY"
+  },
+  {
+    "displayName": "Danger Dan", 
+    "preferredPronouns": "he-him", 
+    "aboutMe": "I enjoy dancing with danger.", 
+    "formData": "Netflix & Chill.Walk.Exercise.Dinner.Dessert.Movie.Picnic.Doggy Play Date.Children Play Date.Coffee", 
+    "associateWith": "male", 
+    "interestedIn": "male", 
+    "photo": "uXhUyqMnC_U"
+  },
+  {
+    "displayName": "Rose", 
+    "preferredPronouns": "she-them", 
+    "aboutMe": "I enjoy gardening and botanical gardens.", 
+    "formData": "Netflix & Chill.Walk.Exercise.Dinner.Dessert.Movie.Picnic.Doggy Play Date.Children Play Date.Coffee", 
+    "associateWith": "non-binary", 
+    "interestedIn": "female", 
+    "photo": "u3WmDyKGsrY"
   },
   {
     "displayName": "Tony Stark", 
@@ -53,4 +98,5 @@
     "interestedIn": "female", 
     "photo": "OBufvGMaBaQ"
   }
+  
 ]}
