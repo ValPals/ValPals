@@ -1,8 +1,13 @@
 import path from 'path';
-import { Pool, QueryResult, QueryArrayResult} from 'pg';
+import pkg from 'pg';
+import { QueryArrayResult } from 'pg';
+const { Pool } = pkg;
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 // TODO: move thi to secrets.js
-const PG_URI = `postgres://fslrxxad:${process.env.DB_PASSWORD}@berry.db.elephantsql.com/lhkttazi`;
+const PG_URI = `postgres://lhkttazi:${process.env.PG_PASSWORD}@raja.db.elephantsql.com/lhkttazi`;
 
 // This pools multiple db accesses into one request
 const pool = new Pool({
@@ -18,7 +23,7 @@ interface UserData {
 }
 
 export default {
-  query: (text, params):Promise<QueryArrayResult<any[]>> => {
+  query: (text, params): Promise<QueryArrayResult<any[]>> => {
     const sqlCommand = text.replace(/\$(\d+)/g, (match, index) => {
       return typeof params[index - 1] === 'string'
         ? `\'${params[index - 1]}\'`

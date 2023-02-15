@@ -16,7 +16,7 @@ function Register() {
           <div className="mt-6 grid grid-cols-1">
             <div>
               <a
-                href="#"
+                href="/auth/google"
                 className="inline-flex w-full justify-center rounded-md border border-gray-600 bg-gray-700 py-3 px-4 shadow-sm hover:bg-gray-900"
               >
               <span className="sr-only">Register with Google</span>
